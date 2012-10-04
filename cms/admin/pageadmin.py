@@ -1325,6 +1325,7 @@ class PageAdmin(ModelAdmin):
                 'plugin_id': plugin_id,
                 'icon': force_escape(saved_object.get_instance_icon_src()),
                 'alt': force_escape(saved_object.get_instance_icon_alt()),
+                'opts': saved_object._meta,
             }
             return render_to_response('admin/cms/page/plugin_forms_ok.html', context, RequestContext(request))
 
